@@ -7,7 +7,7 @@ package apijson
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/stainless-sdks/gotue-go/packages/param"
+	"github.com/ankitdas13/gotue/packages/param"
 	"reflect"
 	"strconv"
 	"sync"

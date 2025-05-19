@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/gotue-go/packages/param"
+	"github.com/ankitdas13/gotue/packages/param"
 )
 
 type Struct struct {

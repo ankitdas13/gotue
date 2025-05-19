@@ -18,10 +18,10 @@ import (
 	"strings"
 	"time"
 
-	"github.com/stainless-sdks/gotue-go/internal"
-	"github.com/stainless-sdks/gotue-go/internal/apierror"
-	"github.com/stainless-sdks/gotue-go/internal/apiform"
-	"github.com/stainless-sdks/gotue-go/internal/apiquery"
+	"github.com/ankitdas13/gotue/internal"
+	"github.com/ankitdas13/gotue/internal/apierror"
+	"github.com/ankitdas13/gotue/internal/apiform"
+	"github.com/ankitdas13/gotue/internal/apiquery"
 )
 
 func getDefaultHeaders() map[string]string {

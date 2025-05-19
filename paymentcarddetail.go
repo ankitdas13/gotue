@@ -8,8 +8,8 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/stainless-sdks/gotue-go/internal/requestconfig"
-	"github.com/stainless-sdks/gotue-go/option"
+	"github.com/ankitdas13/gotue/internal/requestconfig"
+	"github.com/ankitdas13/gotue/option"
 )
 
 // PaymentCardDetailService contains methods and other services that help with

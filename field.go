@@ -1,7 +1,7 @@
 package gotue
 
 import (
-	"github.com/stainless-sdks/gotue-go/packages/param"
+	"github.com/ankitdas13/gotue/packages/param"
 	"io"
 	"time"
 )

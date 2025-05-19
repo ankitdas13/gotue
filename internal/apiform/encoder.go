@@ -13,7 +13,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/stainless-sdks/gotue-go/packages/param"
+	"github.com/ankitdas13/gotue/packages/param"
 )
 
 var encoders sync.Map // map[encoderEntry]encoderFunc

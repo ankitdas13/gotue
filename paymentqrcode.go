@@ -9,12 +9,12 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/stainless-sdks/gotue-go/internal/apijson"
-	"github.com/stainless-sdks/gotue-go/internal/apiquery"
-	"github.com/stainless-sdks/gotue-go/internal/requestconfig"
-	"github.com/stainless-sdks/gotue-go/option"
-	"github.com/stainless-sdks/gotue-go/packages/param"
-	"github.com/stainless-sdks/gotue-go/packages/respjson"
+	"github.com/ankitdas13/gotue/internal/apijson"
+	"github.com/ankitdas13/gotue/internal/apiquery"
+	"github.com/ankitdas13/gotue/internal/requestconfig"
+	"github.com/ankitdas13/gotue/option"
+	"github.com/ankitdas13/gotue/packages/param"
+	"github.com/ankitdas13/gotue/packages/respjson"
 )
 
 // PaymentQrCodeService contains methods and other services that help with

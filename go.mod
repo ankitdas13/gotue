@@ -1,4 +1,4 @@
-module github.com/stainless-sdks/gotue-go
+module github.com/ankitdas13/gotue
 
 go 1.21
 
