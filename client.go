@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/stainless-sdks/gotue-go/internal/requestconfig"
-	"github.com/stainless-sdks/gotue-go/option"
+	"github.com/ankitdas13/gotue/internal/requestconfig"
+	"github.com/ankitdas13/gotue/option"
 )
 
 // Client creates a struct with services and top level methods that help with

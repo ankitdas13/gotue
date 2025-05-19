@@ -8,9 +8,9 @@ import (
 	"os"
 	"testing"
 
-	"github.com/stainless-sdks/gotue-go"
-	"github.com/stainless-sdks/gotue-go/internal/testutil"
-	"github.com/stainless-sdks/gotue-go/option"
+	"github.com/ankitdas13/gotue"
+	"github.com/ankitdas13/gotue/internal/testutil"
+	"github.com/ankitdas13/gotue/option"
 )
 
 func TestPaymentRefundNewWithOptionalParams(t *testing.T) {

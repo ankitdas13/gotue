@@ -10,9 +10,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stainless-sdks/gotue-go"
-	"github.com/stainless-sdks/gotue-go/internal"
-	"github.com/stainless-sdks/gotue-go/option"
+	"github.com/ankitdas13/gotue"
+	"github.com/ankitdas13/gotue/internal"
+	"github.com/ankitdas13/gotue/option"
 )
 
 type closureTransport struct {

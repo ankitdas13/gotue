@@ -3,8 +3,8 @@
 package gotue
 
 import (
-	"github.com/stainless-sdks/gotue-go/internal/apierror"
-	"github.com/stainless-sdks/gotue-go/packages/param"
+	"github.com/ankitdas13/gotue/internal/apierror"
+	"github.com/ankitdas13/gotue/packages/param"
 )
 
 // aliased to make [param.APIUnion] private when embedding
