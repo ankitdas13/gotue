@@ -2190,6 +2190,48 @@
           }
         }
       }
+    },
+    "/plans": {
+      "post": {
+        "tags": [
+          "plans"
+        ],
+        "summary": "Create a new Plan",
+        "description": "Use this endpoint to create a plan with frequency, interval, item details, and notes",
+        "operationId": "createPlan",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PlanCreateRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Plan created successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plan"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -4186,6 +4228,178 @@
             "type": "string",
             "description": "transaction ID",
             "example": "6951370"
+          }
+        }
+      },
+      "PlanCreateRequest": {
+        "type": "object",
+        "required": [
+          "period",
+          "interval",
+          "item"
+        ],
+        "properties": {
+          "period": {
+            "type": "string",
+            "description": "This, combined with interval, defines the frequency of the plan. Possible values are daily, weekly, monthly, quarterly, yearly",
+            "example": "weekly",
+            "enum": [
+              "daily",
+              "weekly",
+              "monthly",
+              "quarterly",
+              "yearly"
+            ]
+          },
+          "interval": {
+            "type": "integer",
+            "description": "This, combined with period, defines the frequency of the plan. If the billing cycle is 2 months, the value should be 2. For daily plans, the minimum value should be 7",
+            "example": 1
+          },
+          "item": {
+            "$ref": "#/components/schemas/PlanItem"
+          },
+          "notes": {
+            "$ref": "#/components/schemas/Notes"
+          }
+        }
+      },
+      "Plan": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "The unique identifier linked to a plan",
+            "example": "plan_00000000000001"
+          },
+          "entity": {
+            "type": "string",
+            "description": "The entity being created. Here, it is plan",
+            "example": "plan"
+          },
+          "interval": {
+            "type": "integer",
+            "description": "Used together with period to define how often the customer should be charged",
+            "example": 1
+          },
+          "period": {
+            "type": "string",
+            "description": "Used together with interval to define how often the customer should be charged. Possible values are daily, weekly, monthly, yearly",
+            "example": "weekly",
+            "enum": [
+              "daily",
+              "weekly",
+              "monthly",
+              "yearly"
+            ]
+          },
+          "item": {
+            "$ref": "#/components/schemas/PlanItem"
+          },
+          "notes": {
+            "$ref": "#/components/schemas/Notes"
+          },
+          "created_at": {
+            "type": "integer",
+            "description": "The Unix timestamp at which the plan was created",
+            "example": 1580219935
+          }
+        }
+      },
+      "PlanItem": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the item",
+            "example": "item_00000000000001"
+          },
+          "active": {
+            "type": "boolean",
+            "description": "Indicates if the item is active",
+            "example": true
+          },
+          "name": {
+            "type": "string",
+            "description": "Name of the plan item",
+            "example": "Test plan - Weekly"
+          },
+          "description": {
+            "type": "string",
+            "nullable": true,
+            "description": "Description for the plan item",
+            "example": "Description for the test plan - Weekly"
+          },
+          "amount": {
+            "type": "integer",
+            "description": "Amount for the plan item in currency subunits",
+            "example": 69900
+          },
+          "unit_amount": {
+            "type": "integer",
+            "description": "Unit amount for the plan item in currency subunits",
+            "example": 69900
+          },
+          "currency": {
+            "type": "string",
+            "description": "ISO code for the currency",
+            "example": "INR"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of the item",
+            "example": "plan"
+          },
+          "unit": {
+            "type": "string",
+            "nullable": true,
+            "description": "Unit for the plan item",
+            "example": null
+          },
+          "tax_inclusive": {
+            "type": "boolean",
+            "description": "Indicates if tax is inclusive",
+            "example": false
+          },
+          "hsn_code": {
+            "type": "string",
+            "nullable": true,
+            "description": "HSN code for the item",
+            "example": null
+          },
+          "sac_code": {
+            "type": "string",
+            "nullable": true,
+            "description": "SAC code for the item",
+            "example": null
+          },
+          "tax_rate": {
+            "type": "number",
+            "nullable": true,
+            "description": "Tax rate for the item",
+            "example": null
+          },
+          "tax_id": {
+            "type": "string",
+            "nullable": true,
+            "description": "Tax ID for the item",
+            "example": null
+          },
+          "tax_group_id": {
+            "type": "string",
+            "nullable": true,
+            "description": "Tax group ID for the item",
+            "example": null
+          },
+          "created_at": {
+            "type": "integer",
+            "description": "The Unix timestamp at which the item was created",
+            "example": 1580219935
+          },
+          "updated_at": {
+            "type": "integer",
+            "description": "The Unix timestamp at which the item was last updated",
+            "example": 1580219935
           }
         }
       }
