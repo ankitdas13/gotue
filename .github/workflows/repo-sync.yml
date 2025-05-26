@@ -6,6 +6,7 @@ on:
 
 jobs:
   stainless:
+    environment: staging
     concurrency: upload-openapi-spec-action
     runs-on: ubuntu-latest
     steps:
