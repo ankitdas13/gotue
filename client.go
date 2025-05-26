@@ -23,6 +23,7 @@ type Client struct {
 	Refunds      RefundService
 	Settlements  SettlementService
 	Payouts      PayoutService
+	Plans        PlanService
 }
 
 // DefaultClientOptions read from the environment (GOTUE_USERNAME, GOTUE_PASSWORD,
@@ -57,6 +58,7 @@ func NewClient(opts ...option.RequestOption) (r Client) {
 	r.Refunds = NewRefundService(opts...)
 	r.Settlements = NewSettlementService(opts...)
 	r.Payouts = NewPayoutService(opts...)
+	r.Plans = NewPlanService(opts...)
 
 	return
 }
