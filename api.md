@@ -150,3 +150,13 @@ Methods:
 
 - <code title="get /payouts/{id}">client.Payouts.<a href="https://pkg.go.dev/github.com/ankitdas13/gotue#PayoutService.Get">Get</a>(ctx <a href="https://pkg.go.dev/context">context</a>.<a href="https://pkg.go.dev/context#Context">Context</a>, id <a href="https://pkg.go.dev/builtin#string">string</a>) (<a href="https://pkg.go.dev/github.com/ankitdas13/gotue">gotue</a>.<a href="https://pkg.go.dev/github.com/ankitdas13/gotue#Payout">Payout</a>, <a href="https://pkg.go.dev/builtin#error">error</a>)</code>
 - <code title="get /payouts">client.Payouts.<a href="https://pkg.go.dev/github.com/ankitdas13/gotue#PayoutService.List">List</a>(ctx <a href="https://pkg.go.dev/context">context</a>.<a href="https://pkg.go.dev/context#Context">Context</a>, query <a href="https://pkg.go.dev/github.com/ankitdas13/gotue">gotue</a>.<a href="https://pkg.go.dev/github.com/ankitdas13/gotue#PayoutListParams">PayoutListParams</a>) (<a href="https://pkg.go.dev/github.com/ankitdas13/gotue">gotue</a>.<a href="https://pkg.go.dev/github.com/ankitdas13/gotue#PayoutListResponse">PayoutListResponse</a>, <a href="https://pkg.go.dev/builtin#error">error</a>)</code>
+
+# Plans
+
+Response Types:
+
+- <a href="https://pkg.go.dev/github.com/ankitdas13/gotue">gotue</a>.<a href="https://pkg.go.dev/github.com/ankitdas13/gotue#Plan">Plan</a>
+
+Methods:
+
+- <code title="post /plans">client.Plans.<a href="https://pkg.go.dev/github.com/ankitdas13/gotue#PlanService.New">New</a>(ctx <a href="https://pkg.go.dev/context">context</a>.<a href="https://pkg.go.dev/context#Context">Context</a>, body <a href="https://pkg.go.dev/github.com/ankitdas13/gotue">gotue</a>.<a href="https://pkg.go.dev/github.com/ankitdas13/gotue#PlanNewParams">PlanNewParams</a>) (<a href="https://pkg.go.dev/github.com/ankitdas13/gotue">gotue</a>.<a href="https://pkg.go.dev/github.com/ankitdas13/gotue#Plan">Plan</a>, <a href="https://pkg.go.dev/builtin#error">error</a>)</code>
