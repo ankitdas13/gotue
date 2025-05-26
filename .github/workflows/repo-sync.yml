@@ -14,6 +14,6 @@ jobs:
       - uses: stainless-api/upload-openapi-spec-action@main
         with:
           stainless_api_key: ${{ secrets.STAINLESS_API_KEY }}
-          input_path: 'path/to/my-company-openapi.json'
-          config_path: 'path/to/my-company.stainless.yaml'
+          input_path: 'openapi.json'
+          config_path: 'openapi.stainless.yml'
           project_name: 'gotue'
