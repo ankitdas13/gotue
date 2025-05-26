@@ -1,7 +1,7 @@
 package apijson
 
 import (
-	"github.com/stainless-sdks/gotue-go/packages/respjson"
+	"github.com/ankitdas13/gotue/packages/respjson"
 	"reflect"
 )
 
