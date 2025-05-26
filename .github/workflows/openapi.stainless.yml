@@ -131,7 +131,13 @@ resources:
     methods:
       list: get /payouts
       retrieve: get /payouts/{id}
-
+  
+  plans:
+    models:
+      plan: '#/components/schemas/Plan'
+    methods:
+      create: post /plans
+      
 settings:
   # All generated integration tests that hit the prism mock http server are marked
   # as skipped. Removing this setting or setting it to false enables tests, but
