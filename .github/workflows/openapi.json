@@ -2232,6 +2232,49 @@
           }
         }
       }
+    },
+    "/plans/{id}": {
+      "get": {
+        "tags": [
+          "plans"
+        ],
+        "summary": "Fetch a Plan by ID",
+        "description": "Use this endpoint to retrieve the details of a plan using its unique identifier.",
+        "operationId": "fetchPlanById",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The unique identifier of the plan. For example, plan_00000000000001."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Plan details fetched successfully",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Plan"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad request. This error occurs when you are not passing the plan_id in the API endpoint to fetch a plan based on the ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
