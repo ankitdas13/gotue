@@ -1,4 +1,4 @@
-name: Upload OpenAPI spec to Stainless
+name: Repo Sync
 
 on:
   push:
