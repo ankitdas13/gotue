@@ -16,5 +16,4 @@ jobs:
         with:
           stainless_api_key: ${{ secrets.STAINLESS_API_KEY }}
           input_path: '.github/workflows/openapi.json'
-          config_path: '.github/workflows/openapi.stainless.yml'
           project_name: 'gotue'
