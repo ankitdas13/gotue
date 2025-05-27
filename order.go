@@ -262,6 +262,8 @@ type OrderNewParams struct {
 	PartialPayment param.Opt[bool] `json:"partial_payment,omitzero"`
 	// Receipt number for internal reference
 	Receipt param.Opt[string] `json:"receipt,omitzero"`
+	// test decription
+	Test param.Opt[string] `json:"test,omitzero"`
 	// Key-value pair that can be used to store additional information about the
 	// entity.
 	Notes NotesUnionParam `json:"notes,omitzero"`

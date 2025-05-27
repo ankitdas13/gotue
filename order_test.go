@@ -40,6 +40,7 @@ func TestOrderNewWithOptionalParams(t *testing.T) {
 		OfferID:        gotue.String("offer_JHD834hjbxzhd38d"),
 		PartialPayment: gotue.Bool(true),
 		Receipt:        gotue.String("rcptid_11"),
+		Test:           gotue.String("test"),
 	})
 	if err != nil {
 		var apierr *gotue.Error
