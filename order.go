@@ -38,7 +38,7 @@ func NewOrderService(opts ...option.RequestOption) (r OrderService) {
 }
 
 // Create a new order.
-func (r *OrderService) New(ctx context.Context, body OrderNewParams, opts ...option.RequestOption) (res *Order, err error) {
+func (r *OrderService) Create(ctx context.Context, body OrderNewParams, opts ...option.RequestOption) (res *Order, err error) {
 	opts = append(r.Options[:], opts...)
 	path := "orders"
 	err = requestconfig.ExecuteNewRequest(ctx, http.MethodPost, path, body, &res, opts...)

@@ -27,7 +27,7 @@ func TestOrderNewWithOptionalParams(t *testing.T) {
 		option.WithUsername("My Username"),
 		option.WithPassword("My Password"),
 	)
-	_, err := client.Orders.New(context.TODO(), gotue.OrderNewParams{
+	_, err := client.Orders.Create(context.TODO(), gotue.OrderNewParams{
 		Amount:                1000,
 		Currency:              "INR",
 		FirstPaymentMinAmount: gotue.Int(0),
