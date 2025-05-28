@@ -2378,6 +2378,10 @@
             "description": "ISO currency code",
             "example": "INR"
           },
+          "test_new": {
+            "type": "string",
+            "description": "test decription"
+          },
           "receipt": {
             "type": "string",
             "description": "Receipt number for internal reference",
