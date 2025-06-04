@@ -1,5 +1,26 @@
 # Changelog
 
+## 0.1.0-alpha.2 (2025-06-04)
+
+Full Changelog: [v0.1.0-alpha.1...v0.1.0-alpha.2](https://github.com/ankitdas13/gotue/compare/v0.1.0-alpha.1...v0.1.0-alpha.2)
+
+### Features
+
+* **api:** api update ([4089537](https://github.com/ankitdas13/gotue/commit/4089537b752a29c77e4f3766908651e2b450f0cd))
+* **api:** manual updates ([b2f77a3](https://github.com/ankitdas13/gotue/commit/b2f77a33f3e77cf7f8660f9715de86bdec329e10))
+* **client:** allow overriding unions ([fb44f08](https://github.com/ankitdas13/gotue/commit/fb44f08a419976d24926d327f7b5cee30a72c716))
+
+
+### Bug Fixes
+
+* **client:** cast to raw message when converting to params ([275206d](https://github.com/ankitdas13/gotue/commit/275206da3f67bd524fcc161b37edd8eb1d5f21f9))
+* fix error ([77e9b92](https://github.com/ankitdas13/gotue/commit/77e9b92ee8770772ea180cea3411f5f5ab06fa2a))
+
+
+### Chores
+
+* make go mod tidy continue on error ([0ab40ba](https://github.com/ankitdas13/gotue/commit/0ab40ba3afe9d16a45ac5d4d0d41707dedba4ad9))
+
 ## 0.1.0-alpha.1 (2025-05-26)
 
 Full Changelog: [v0.0.1-alpha.0...v0.1.0-alpha.1](https://github.com/ankitdas13/gotue/compare/v0.0.1-alpha.0...v0.1.0-alpha.1)
