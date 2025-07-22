@@ -132,7 +132,7 @@ func (r *NotesUnion) UnmarshalJSON(data []byte) error {
 // be used at the last possible moment before sending a request. Test for this with
 // NotesUnionParam.Overrides()
 func (r NotesUnion) ToParam() NotesUnionParam {
-	return param.Override[NotesUnionParam](r.RawJSON())
+	return param.Override[NotesUnionParam](json.RawMessage(r.RawJSON()))
 }
 
 // Only one field can be non-zero.
@@ -145,7 +145,7 @@ type NotesUnionParam struct {
 }
 
 func (u NotesUnionParam) MarshalJSON() ([]byte, error) {
-	return param.MarshalUnion[NotesUnionParam](u.OfStringMap, u.OfStringArray)
+	return param.MarshalUnion(u, u.OfStringMap, u.OfStringArray)
 }
 func (u *NotesUnionParam) UnmarshalJSON(data []byte) error {
 	return apijson.UnmarshalRoot(data, u)
@@ -262,6 +262,8 @@ type OrderNewParams struct {
 	PartialPayment param.Opt[bool] `json:"partial_payment,omitzero"`
 	// Receipt number for internal reference
 	Receipt param.Opt[string] `json:"receipt,omitzero"`
+	// test decription
+	TestNew param.Opt[string] `json:"test_new,omitzero"`
 	// Key-value pair that can be used to store additional information about the
 	// entity.
 	Notes NotesUnionParam `json:"notes,omitzero"`
